@@ -6,11 +6,11 @@ public:
             int b=nums[i];
             int target1=target-b;
             auto c=find(nums.begin()+i+1,nums.end(),target1);
-            int d=c-nums.begin();
-            if(d==a)
-            continue;
-            return{i,d};
+            if(c!=nums.end()){
+                int d=c-nums.begin();
+                return {i,d};
+            }
         }
-    return{};
+        return {};
     }
 };
