@@ -1,6 +1,8 @@
 class Solution {
 public:
     vector<int> topKFrequent(vector<int>& nums, int k) {
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL);
         multiset<int> m1(nums.begin(),nums.end());
         set<int> temp(nums.begin(),nums.end());
         vector<int> m2(temp.begin(),temp.end());
